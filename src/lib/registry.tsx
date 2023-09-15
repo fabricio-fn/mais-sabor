@@ -18,16 +18,14 @@ export default function StyledComponentsRegistry({
     return <>{styles}</>
   })
 
-  if (typeof window !== 'undefined') return
-  <>
-    {children}
-  </>
-
   return (
-    <ThemeProvider theme={Themes}>
-      <StyleSheetManager sheet={styledComponentsStyleSheet.instance}>
+    <StyleSheetManager
+      sheet={styledComponentsStyleSheet.instance}
+      shouldForwardProp={(prop) => !prop.startsWith('$')}
+    >
+      <ThemeProvider theme={Themes}>
         {children}
-      </StyleSheetManager>
-    </ThemeProvider>
+      </ThemeProvider>
+    </StyleSheetManager>
   )
 }

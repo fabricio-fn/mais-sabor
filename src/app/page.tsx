@@ -1,14 +1,11 @@
 "use client"
 
-import { StyleButton } from "@/components/Button/StyleButton";
+import Home from "@/components/Home/Home"
 
-export default function Home() {
+export default function Main() {
   return (
     <main>
-      <section>
-        <h3><span>Quality Food</span></h3>
-        <StyleButton buttonStyle="outline" buttonSize="md">Sign In</StyleButton>
-      </section>
+      <Home />
     </main>
   )
 }

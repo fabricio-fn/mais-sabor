@@ -10,6 +10,12 @@ export const GlobalsStyles = createGlobalStyle`
         scroll-behavior: smooth;
     }
 
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     section, header, footer {
         padding: 1rem 10%;
         display: flex;
@@ -28,5 +34,8 @@ export const GlobalsStyles = createGlobalStyle`
         font-weight: 700;
     }
 
-    span { color: #F54748; }
+    main, header, footer {
+        max-width: 1920px;
+        width: 100%;
+    }
 `
