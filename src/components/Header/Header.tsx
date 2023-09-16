@@ -22,8 +22,8 @@ export default function Header() {
       <StyleNav className={showMenu ? "active" : ""}>
         <StyleLink linkStyle="normal" href="#home">Home</StyleLink>
         <StyleLink linkStyle="normal" href="/">Review</StyleLink>
-        <StyleLink linkStyle="normal" href="/">About</StyleLink>
-        <StyleLink linkStyle="normal" href="/">Contact</StyleLink>
+        <StyleLink linkStyle="normal" href="/">About Us</StyleLink>
+        <StyleLink linkStyle="normal" href="/">Contact Us</StyleLink>
       </StyleNav>
 
       <StyleButton buttonStyle="solid" buttonSize="sm" className="btnMenu"

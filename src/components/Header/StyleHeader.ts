@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const StyleHeader = styled.header`
   justify-content: space-between !important;
   position: fixed;
+  z-index: 999;
   background: ${({ theme }) => theme.colors.secondary};
 
   .btnMenu {
