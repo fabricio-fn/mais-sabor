@@ -3,7 +3,7 @@ interface iText {
 	className?: string;
 	tag: "h1" | "h2" | "h3" | "p"
 	fontSize: "lg" | "md" | "sm" | "xs" | "xxs"
-	color: "dark" | "black" | "light" | "gray" | "grayLight"
+	color: "dark" | "black" | "light" | "gray" | "grayLight" | "red"
 }
 
 export default function Text({ children, className, tag }: iText) {
