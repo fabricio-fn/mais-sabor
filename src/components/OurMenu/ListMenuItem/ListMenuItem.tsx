@@ -16,7 +16,7 @@ export default function ListMenuItem() {
       badgeStyle: "green",
       buttonStyle: "solidYellow",
     },
-  
+
     {
       name: "Rice Bowl",
       description: "Delicious rice bowl",
@@ -24,7 +24,7 @@ export default function ListMenuItem() {
       badgeStyle: "green",
       buttonStyle: "solidYellow",
     },
-  
+
     {
       name: "Rice Bowl",
       description: "Delicious rice bowl",
@@ -32,7 +32,7 @@ export default function ListMenuItem() {
       badgeStyle: "green",
       buttonStyle: "solidYellow",
     },
-  
+
   ]
 
   return (
