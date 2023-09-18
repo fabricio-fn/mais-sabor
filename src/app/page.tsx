@@ -1,6 +1,7 @@
 "use client"
 
 import Home from "@/components/Home/Home"
+import OurMenu from "@/components/OurMenu/OurMenu"
 import PizzaSpecialOffer from "@/components/PizzaSpecialOffer/PizzaSpecialOffer"
 
 export default function Main() {
@@ -8,6 +9,7 @@ export default function Main() {
     <main>
       <Home />
       <PizzaSpecialOffer />
+      <OurMenu />
     </main>
   )
 }

@@ -21,11 +21,11 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className={inter.className}>
         <StyledComponentsRegistry>
-          <Header />   
+          <Header />
 
           {children}
 
-          <Footer />   
+          <Footer />
           <GlobalsStyles />
         </StyledComponentsRegistry>
       </body>

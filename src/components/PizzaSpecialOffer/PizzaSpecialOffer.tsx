@@ -17,14 +17,14 @@ export default function PizzaSpecialOffer() {
 
           <FlexBoxContainer className="assessment">
             <StyleText tag="h3" fontSize="xs" color="dark">Sarah Taylor</StyleText>
-            <StyleText tag="p" fontSize="xxs" color="gray">Healthy and delicious pizza</StyleText>    
-            
+            <StyleText tag="p" fontSize="xxs" color="gray">Healthy and delicious pizza</StyleText>
+
             <FlexBoxContainer className="starIcon">
-              <MdStar fill="#FDC55E" size="15"/>
-              <MdStar fill="#FDC55E" size="15"/>
-              <MdStar fill="#FDC55E" size="15"/>
-              <MdStar fill="#FDC55E" size="15"/>
-              <MdStar fill="#FDC55E" size="15"/>
+              <MdStar fill="#FDC55E" size="15" />
+              <MdStar fill="#FDC55E" size="15" />
+              <MdStar fill="#FDC55E" size="15" />
+              <MdStar fill="#FDC55E" size="15" />
+              <MdStar fill="#FDC55E" size="15" />
             </FlexBoxContainer>
           </FlexBoxContainer>
         </FlexBoxContainer>
