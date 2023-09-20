@@ -16,8 +16,10 @@
     "@types/react-dom": "18.2.7",
     "@types/react-icons": "^3.0.0",
     "@types/styled-components": "^5.1.27",
+    "@types/yup": "^0.32.0",
     "eslint": "8.49.0",
     "eslint-config-next": "13.4.19",
+    "formik": "^2.4.5",
     "next": "13.4.19",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -25,7 +27,8 @@
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.0.7",
-    "typescript": "5.2.2"
+    "typescript": "5.2.2",
+    "yup": "^1.2.0"
   },
   "devDependencies": {
     "@types/react-slick": "^0.23.10"
