@@ -7,7 +7,7 @@ interface iField {
 	type: string;
 	name: string;
 	label: string;
-	placeholder: string;
+	placeholder?: string;
 }
 
 export default function Field({ styleInput, type, name, label, placeholder }: iField) {
@@ -15,9 +15,13 @@ export default function Field({ styleInput, type, name, label, placeholder }: iF
 
 	return (
 		<StyleField>
-			<label>{label}</label>
+			{label}
 			<Input styleInput={styleInput} {...field} type={type} placeholder={placeholder} />
-			{meta.touched && meta.error ? (<span className={`${meta.touched && meta.error ? 'invalid' : ''}`}>{meta.error}</span>) : null}
+
+			{meta.touched && meta.error ? (
+				<span className={`${meta.touched && meta.error ? 'invalid' : ''}`}>
+					{meta.error}
+				</span>) : null}
 		</StyleField>
 	)
 }

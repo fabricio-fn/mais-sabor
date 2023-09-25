@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const StyleFormSignIn = styled.section`
+export const StyleForm = styled.section`
   gap: 4rem;
   flex-direction: column;
 
@@ -17,6 +17,8 @@ export const StyleFormSignIn = styled.section`
 
     .checkbox {
       justify-content: start;
+      flex-wrap: wrap;
+      gap: .5rem;
       
       label {
         flex-direction: row;
@@ -25,7 +27,7 @@ export const StyleFormSignIn = styled.section`
     }
   }
 
-  .signupnow {
+  .signUpOrsignIn {
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-between !important;

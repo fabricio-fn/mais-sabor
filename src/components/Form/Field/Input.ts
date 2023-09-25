@@ -11,7 +11,6 @@ export const Input = styled.input<iInput>`
   padding: 1rem .5rem;
   display: flex;
   outline: none;
-  width: 100%;
   border-radius: .5rem;
 
   ${({ styleInput, theme }) => {
