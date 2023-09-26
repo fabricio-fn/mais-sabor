@@ -2,28 +2,29 @@ import Link from "next/link";
 import { css, styled } from "styled-components";
 
 interface iLink {
-	linkStyle: "normal" | "light" | "underline" | "dark"
+	linkStyle: "normal" | "light" | "underline" | "dark" | "gray" | "standard"
 }
 
 export const StyleLink = styled(Link) <iLink>`
 	transition: .4s;
+	text-decoration: none;
 
-	${({ linkStyle }) => {
+	${({ linkStyle, theme }) => {
 	switch (linkStyle) {
 		case "normal":
 			return css`
-				color: ${({ theme }) => theme.colors.additional_5};
+				color: ${theme.colors.additional_5};
 				text-decoration: none;
 
 				&:hover {
-					color: ${({ theme }) => theme.colors.primary};
+					color: ${theme.colors.primary};
 				}
 			`
 		case "light":
 			return css`
-				color: ${({ theme }) => theme.colors.secondary};
-				text-decoration: none;
-				font-weight: 400 !important;
+				color: ${theme.colors.secondary};
+				font-size: 12px;
+				font-weight: initial !important;
 
 				&:hover {
 					text-decoration: underline;
@@ -31,16 +32,29 @@ export const StyleLink = styled(Link) <iLink>`
 			`
 		case "underline":
 			return css`
-				color: ${({ theme }) => theme.colors.primary};
+				color: ${theme.colors.primary};
+				text-decoration: underline;
 			`
 		case "dark":
 			return css`
-				color: ${({ theme }) => theme.colors.additional_1};
-				text-decoration: none;
+				color: ${theme.colors.additional_1};
 
 				&:hover {
-					color: ${({ theme }) => theme.colors.primary};
+					color: ${theme.colors.primary};
 				}
+			`
+		case "gray":
+			return css`
+				color: ${theme.colors.additional_7};
+				font-weight: initial !important;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			`
+		case "standard":
+			return css`
+			
 			`
 	}}}
 `
