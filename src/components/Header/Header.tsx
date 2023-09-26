@@ -9,9 +9,13 @@ import { MdMenu, MdClose } from "react-icons/md"
 import useHeader from "./Hook/useHeader"
 import { FlexBoxContainer } from "../FlexBoxContainer/FlexBoxContainer";
 import { StyleText } from "../Text/StyleText";
+import { StyleButtonLink } from "../ButtonLink/StyleButtonLink";
+import { useState } from "react";
+import Image from "next/image";
 
 export default function Header() {
   const { showMenu, toggleMenu } = useHeader()
+  const [isConnected, setIsConnected] = useState(false)
 
   return (
     <StyleHeader>
@@ -21,9 +25,9 @@ export default function Header() {
 
       <StyleNav className={showMenu ? "active" : ""}>
         <StyleLink linkStyle="normal" href="#home">Home</StyleLink>
-        <StyleLink linkStyle="normal" href="/">Review</StyleLink>
-        <StyleLink linkStyle="normal" href="/">About Us</StyleLink>
-        <StyleLink linkStyle="normal" href="/">Contact Us</StyleLink>
+        <StyleLink linkStyle="normal" href="">Review</StyleLink>
+        <StyleLink linkStyle="normal" href="">About Us</StyleLink>
+        <StyleLink linkStyle="normal" href="">Contact Us</StyleLink>
       </StyleNav>
 
       <StyleButton buttonStyle="solid" buttonSize="sm" className="btnMenu"
@@ -31,10 +35,23 @@ export default function Header() {
         {showMenu ? (<MdClose />) : <MdMenu />}
       </StyleButton>
 
-      <FlexBoxContainer className="signIn_signUp">
-        <StyleButton buttonStyle="outline" buttonSize="md">Sign In</StyleButton>
-        <StyleButton buttonStyle="solid" buttonSize="md">Sign Up</StyleButton>
-      </FlexBoxContainer>
+      {isConnected ?
+        <FlexBoxContainer className="buttons">
+          <StyleButtonLink buttonLinkSize="lg" buttonLinkStyle="outline" href="/signin">
+            Sign In
+          </StyleButtonLink>
+
+          <StyleButtonLink buttonLinkSize="lg" buttonLinkStyle="solid" href="/signup">
+            Sign Up
+          </StyleButtonLink>
+        </FlexBoxContainer>
+        :
+        <FlexBoxContainer className="profilePicture">
+          <StyleLink linkStyle="standard" href="">
+            <Image src="/img/avatar-02.jpg" alt="Profile picture" width={60} height={60} />
+          </StyleLink>
+        </FlexBoxContainer>
+      }
     </StyleHeader>
   )
 }

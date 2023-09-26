@@ -10,7 +10,7 @@ export default function ListBlogItem() {
     <StyleListBlogItem>
       <FlexBoxContainer className="cardsPosts">
         <FlexBoxContainer className="img">
-          <Image src="/img/imgBlog.jpg" alt="" width={400} height={400} />
+          <Image src="/img/imgBlog.jpg" alt="" width={400} height={250} />
         </FlexBoxContainer>
 
         <FlexBoxContainer className="content">

@@ -1,22 +1,21 @@
 import styled from "styled-components";
 
 export const StyleListBlogItem = styled.li`
+  width: 380px;
+
+  @media (max-width: 407px) {
+    width: 100%;
+    height: auto;
+  }
+
   .cardsPosts {
     transition: .4s;
     cursor: pointer;
-    justify-content: space-between;
     border: 1px solid ${({ theme }) => theme.colors.additional_7};
-    width: 380px;
-    height: 400px;
 
-    .img {
+    .img > img {
       width: 100%;
-      
-      img {
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
-      }
+      object-fit: cover;
     }
 
     .content {
@@ -35,11 +34,6 @@ export const StyleListBlogItem = styled.li`
         align-items: center;
         gap: 1rem;
       }
-    }
-
-    @media (max-width: 407px) {
-      width: 100%;
-      height: auto;
     }
 
     &:hover {

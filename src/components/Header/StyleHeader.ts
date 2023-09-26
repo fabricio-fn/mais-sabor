@@ -10,10 +10,23 @@ export const StyleHeader = styled.header`
     display: none;
   }
 
-  .signIn_signUp {
+  .buttons {
     gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: end !important;
+  }
+
+  .profilePicture {
+    z-index: 999;
+    width: 60px;
+    height: 60px;
+
+    img {
+      border-radius: 50%;
+      border: 2px solid ${({ theme }) => theme.colors.primary};
+
+      &:hover {
+        opacity: .5;
+      }
+    }
   }
 
   @media(max-width: 768px) { 
@@ -22,15 +35,18 @@ export const StyleHeader = styled.header`
     
     .btnMenu {
       display: block;
-      z-index: 999;
     }
   }
 
-  @media(max-width: 868px) {
+  @media(max-width: 968px) {
     h2 { display: none; }
+
+    .buttons > a {
+      padding: .5rem !important;
+    }
   }
 
   .active {
-    left: 0;
+    left: 5%;
   }
 `

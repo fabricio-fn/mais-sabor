@@ -6,35 +6,9 @@ import { StyleListMenuItem } from "./StyleListMenuItem";
 import { BsBagCheck } from "react-icons/bs"
 import { AiOutlineHeart } from "react-icons/ai"
 import Image from "next/image";
+import { menuItems } from "./MenuItemsData";
 
 export default function ListMenuItem() {
-  const menuItems = [
-    {
-      name: "Rice Bowl",
-      description: "Delicious rice bowl",
-      price: "$13",
-      badgeStyle: "green",
-      buttonStyle: "solidYellow",
-    },
-
-    {
-      name: "Rice Bowl",
-      description: "Delicious rice bowl",
-      price: "$13",
-      badgeStyle: "green",
-      buttonStyle: "solidYellow",
-    },
-
-    {
-      name: "Rice Bowl",
-      description: "Delicious rice bowl",
-      price: "$13",
-      badgeStyle: "green",
-      buttonStyle: "solidYellow",
-    },
-
-  ]
-
   return (
     <>
       {menuItems.map((item, index) => (
@@ -49,14 +23,14 @@ export default function ListMenuItem() {
             </FlexBoxContainer>
 
             <FlexBoxContainer className="imgCard">
-              <Image src="/img/imgPizza.png" alt="Imagem do Prato/Lanche" width={200} height={200} />
+              <Image src={item.image} alt={item.name} width={180} height={180} />
             </FlexBoxContainer>
 
             <FlexBoxContainer className="footerCard">
               <FlexBoxContainer className="content">
-                <StyleText tag="h2" fontSize="sm" color="dark">Rice Bowl</StyleText>
-                <StyleText tag="p" fontSize="xs" color="gray">Delicious rice bowl</StyleText>
-                <StyleText tag="h3" fontSize="sm" color="red">$13</StyleText>
+                <StyleText tag="h2" fontSize="sm" color="dark">{item.name}</StyleText>
+                <StyleText tag="p" fontSize="xs" color="gray">{item.description}</StyleText>
+                <StyleText tag="h3" fontSize="sm" color="red">{item.price}</StyleText>
               </FlexBoxContainer>
 
               <StyleButton buttonStyle="solid" buttonSize="sm" title="Prosseguir para a compra">

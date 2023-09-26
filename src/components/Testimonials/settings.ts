@@ -1,4 +1,15 @@
-export const settings = {
+interface iSettings {
+	infinite: boolean;
+  speed: number;
+  slidesToShow: number;
+  slidesToScroll: number;
+  autoplay: boolean;
+  autoplaySpeed: number;
+  centerMode: boolean;
+  centerPadding: string;
+}
+
+export const settings: iSettings = {
 	infinite: true,
 	speed: 500,
 	slidesToShow: 1,

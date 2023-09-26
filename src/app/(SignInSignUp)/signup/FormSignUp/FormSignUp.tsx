@@ -45,7 +45,8 @@ export default function FormSignIn() {
 
           <FlexBoxContainer className="signUpOrsignIn">
             <StyleText tag="p" color="dark" fontSize="xs">
-              Don't have an account?
+              Don&apos;t have an account?
+              
               <StyleLink href="/signin" linkStyle="underline">
                 Sign In Now
               </StyleLink>

@@ -9,12 +9,12 @@ export const StyleNav = styled.nav`
     position: absolute;
     left: -100%;
     padding: 2rem 5%;
-    margin-top: 280px;
-    display: flex;
+    margin-top: 310px;
     align-items: start;
     flex-direction: column;
-    width: 100%;
+    width: auto;
+    border-radius: .5rem;
     transition: .4s;
-    background-color: ${({theme}) => theme.colors.secondary};
+    background: ${({ theme }) => theme.colors.additional_8};
   }
 `

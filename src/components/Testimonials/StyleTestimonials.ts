@@ -11,6 +11,8 @@ export const StyleTestimonials = styled.section`
 
 	.title { flex-direction: column; }
 
+	.slick-slider { width: 100%; }
+
 	button { display: none !important; }
 
 	.item {
@@ -23,6 +25,8 @@ export const StyleTestimonials = styled.section`
 			gap: 3rem;
 			flex-direction: column;
 			width: 700px;
+
+			@media (max-width: 768px) { width: 100%; }
 		}
 
 		.user {
@@ -31,9 +35,5 @@ export const StyleTestimonials = styled.section`
 
 			img { border-radius: 1rem; }
 		}
-	}
-
-	@media (max-width: 768px) {
-		.item { .content { width: 100%; } }
 	}
 `
