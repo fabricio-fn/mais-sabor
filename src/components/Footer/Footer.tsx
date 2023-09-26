@@ -10,6 +10,7 @@ export default function Footer() {
   return (
     <>
       <FooterLinks />
+      
       <StyleFooter>
         <StyleText tag="p" fontSize="xxs" color="light">Copyright © 2023 - All Right Reserved</StyleText>
 

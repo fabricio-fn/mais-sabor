@@ -9,9 +9,7 @@ export const StyleFooterLinks = styled.section`
   padding: 4rem 10%;
   gap: 4rem;
 
-  @media (max-width: 768px) {
-    padding: 4rem 5%;
-  }
+  @media (max-width: 768px) { padding: 4rem 5%; }
 
   .logo {
     gap: 2rem;
@@ -28,12 +26,12 @@ export const StyleFooterLinks = styled.section`
         width: 100%;
         flex-direction: column;
 
-        button { width: 100%; }
+        a { width: 100%; }
       }
     }
   }
 
-  .otherLink { 
+  .otherLinks { 
     justify-content: space-between !important;
     flex-wrap: wrap;
     gap: 4rem;
