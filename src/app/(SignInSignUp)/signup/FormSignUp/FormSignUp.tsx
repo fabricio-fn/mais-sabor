@@ -5,7 +5,7 @@ import { StyleLink } from "@/components/Link/StyleLink"
 import { FlexBoxContainer } from "@/components/FlexBoxContainer/FlexBoxContainer"
 import { StyleText } from "@/components/Text/StyleText"
 import { schemaSignUp } from './schemaSignUp';
-import { StyleForm } from '@/app/signin/FormSignIn/StyleForm';
+import { StyleForm } from '@/app/(SignInSignUp)/signin/FormSignIn/StyleForm';
 
 export default function FormSignIn() {
   return (

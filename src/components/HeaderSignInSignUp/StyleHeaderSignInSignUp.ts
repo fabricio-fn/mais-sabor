@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyleHeaderSignInSignIn = styled.header`
+export const StyleHeaderSignInSignUp = styled.header`
   background: ${({ theme }) => theme.colors.secondary};
   justify-content: start;
 `
