@@ -47,7 +47,7 @@ export default function FormSignIn() {
             <StyleText tag="p" color="dark" fontSize="xs">
               Don&apos;t have an account?
               
-              <StyleLink href="/signin" linkStyle="underline">
+              <StyleLink href="/signin" linkStyle="underline" target="_self">
                 Sign In Now
               </StyleLink>
             </StyleText>

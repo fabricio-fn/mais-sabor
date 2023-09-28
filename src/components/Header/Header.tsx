@@ -15,7 +15,7 @@ import Image from "next/image";
 
 export default function Header() {
   const { showMenu, toggleMenu } = useHeader()
-  const [isConnected, setIsConnected] = useState(false)
+  const [isConnected, setIsConnected] = useState(true)
 
   return (
     <StyleHeader>
@@ -37,11 +37,11 @@ export default function Header() {
 
       {isConnected ?
         <FlexBoxContainer className="buttons">
-          <StyleButtonLink buttonLinkSize="lg" buttonLinkStyle="outline" href="/signin">
+          <StyleButtonLink buttonLinkSize="lg" buttonLinkStyle="outline" href="/signin" target="_self">
             Sign In
           </StyleButtonLink>
 
-          <StyleButtonLink buttonLinkSize="lg" buttonLinkStyle="solid" href="/signup">
+          <StyleButtonLink buttonLinkSize="lg" buttonLinkStyle="solid" href="/signup" target="_self">
             Sign Up
           </StyleButtonLink>
         </FlexBoxContainer>

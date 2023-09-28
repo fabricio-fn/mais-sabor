@@ -9,7 +9,7 @@ export default function HeaderSignInSignIn() {
 
   return (
     <StyleHeaderSignInSignUp>
-      <StyleLink href="/" linkStyle="standard">
+      <StyleLink href="/" linkStyle="standard" target="_self">
         <StyleText tag="h2" fontSize="sm" color="dark">
           <StyleBadge badgeStyle="transparent">+</StyleBadge>Flavor
         </StyleText>

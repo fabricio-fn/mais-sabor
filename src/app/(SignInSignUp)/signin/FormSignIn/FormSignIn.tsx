@@ -40,7 +40,7 @@ export default function FormSignIn() {
           <FlexBoxContainer className="signUpOrsignIn">
             <StyleText tag="p" color="dark" fontSize="xs">
               New here?
-              <StyleLink href="/signup" linkStyle="underline">
+              <StyleLink href="/signup" linkStyle="underline" target="_self">
                 Sign Up Now
               </StyleLink>
             </StyleText>
