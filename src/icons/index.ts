@@ -1,0 +1,11 @@
+export { BiLogoFacebook, BiLogoLinkedin } from 'react-icons/bi';
+export { RiTwitterXLine } from 'react-icons/ri';
+export { MdMenu, MdClose } from 'react-icons/md';
+export { GiHamburger } from 'react-icons/gi';
+export { HiOutlineArrowRight } from 'react-icons/hi';
+export { BsBagCheck } from 'react-icons/bs';
+export { AiOutlineHeart } from 'react-icons/ai';
+export { BiLogoPlayStore } from 'react-icons/bi';
+export { FaAppStoreIos } from 'react-icons/fa';
+export { MdOutlineArrowForwardIos, MdStar } from 'react-icons/md';
+export { BiSolidQuoteRight } from 'react-icons/bi';
