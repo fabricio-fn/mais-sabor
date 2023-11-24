@@ -1,23 +1,22 @@
-import { FlexBoxContainer } from "../FlexBoxContainer/FlexBoxContainer";
-import { StyleNewsletter } from "./StyleNewsletter";
-import { StyleText } from "../Text/StyleText";
-import FormNewsletter from "./FormNewsletter/FormNewsletter";
+import { Box, StyleTypography } from '@/components';
+import { StyleNewsletter } from './StyleNewsletter';
+import FormNewsletter from './FormNewsletter/FormNewsletter';
 
-export default function Newsletter() {
+export function Newsletter() {
   return (
     <StyleNewsletter>
-      <FlexBoxContainer className="content">
-        <StyleText tag="h2" color="dark" fontSize="sm">
+      <Box className="content">
+        <StyleTypography tag="h2" color="dark" size="sm">
           Subscribe Our Newsletter
-        </StyleText>
+        </StyleTypography>
 
-        <StyleText tag="p" color="gray" fontSize="xs">
-          Best cooks and the best delivery guys all at your service. 
-          Hot tasty food will reach you in 60 minutes.
-        </StyleText>
-      </FlexBoxContainer>
+        <StyleTypography tag="p" color="gray" size="xs">
+          Best cooks and the best delivery guys all at your service. Hot tasty
+          food will reach you in 60 minutes.
+        </StyleTypography>
+      </Box>
 
       <FormNewsletter />
     </StyleNewsletter>
-  )
+  );
 }

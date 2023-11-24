@@ -1,28 +1,30 @@
-import { FlexBoxContainer } from "@/components/FlexBoxContainer/FlexBoxContainer";
-import { StyleListBlogItem } from "./StyleListBlogItem";
-import Image from "next/image";
-import { StyleLink } from "@/components/Link/StyleLink";
-import { StyleText } from "@/components/Text/StyleText";
-import { HiOutlineArrowRight } from "react-icons/hi"
+import { StyleListBlogItem } from './StyleListBlogItem';
+import Image from 'next/image';
+import { StyleTypography, StyleLink, Box } from '@/components';
+import { HiOutlineArrowRight } from '@/icons';
 
 export default function ListBlogItem() {
   return (
     <StyleListBlogItem>
-      <FlexBoxContainer className="cardsPosts">
-        <FlexBoxContainer className="img">
+      <Box className="cardsPosts">
+        <Box className="img">
           <Image src="/img/imgBlog.jpg" alt="" width={400} height={250} />
-        </FlexBoxContainer>
+        </Box>
 
-        <FlexBoxContainer className="content">
-          <StyleText tag="h2" color="dark" fontSize="xs">Faster home delivery</StyleText>
-          <StyleText tag="p" color="gray" fontSize="xs">We are giving our cusomers the home delivery services..</StyleText>
+        <Box className="content">
+          <StyleTypography tag="h2" color="dark" size="xs">
+            Faster home delivery
+          </StyleTypography>
+          <StyleTypography tag="p" color="gray" size="xs">
+            We are giving our cusomers the home delivery services..
+          </StyleTypography>
 
-          <StyleLink linkStyle="dark" href="/">
-            Learn More 
+          <StyleLink variant="dark" href="/">
+            Learn More
             <HiOutlineArrowRight size={25} />
           </StyleLink>
-        </FlexBoxContainer>
-      </FlexBoxContainer>
+        </Box>
+      </Box>
     </StyleListBlogItem>
-  )
+  );
 }

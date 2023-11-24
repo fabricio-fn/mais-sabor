@@ -1,11 +1,7 @@
 import { Form, Formik } from 'formik';
-import Field from "@/components/Form/Field/Field"
-import { StyleButton } from "@/components/Button/StyleButton"
-import { StyleLink } from "@/components/Link/StyleLink"
-import { FlexBoxContainer } from "@/components/FlexBoxContainer/FlexBoxContainer"
-import { StyleText } from "@/components/Text/StyleText"
 import { schemaSignUp } from './schemaSignUp';
 import { StyleForm } from '@/app/(SignInSignUp)/signin/FormSignIn/StyleForm';
+import { Field, StyleTypography, Button, Box, StyleLink } from '@/components';
 
 export default function FormSignIn() {
   return (
@@ -16,44 +12,64 @@ export default function FormSignIn() {
         password: '',
         acceptTerms: false,
       }}
-
       validationSchema={schemaSignUp}
       onSubmit={(values) => {
-        console.log(values)
+        console.log(values);
       }}
     >
-
       {() => (
         <StyleForm>
           <Form>
-            <Field styleInput="outline" name="name" type="text" label="Name" placeholder="Your name" />
-            <Field styleInput="outline" name="email" type="email" label="Email" placeholder="Your email address" />
-            <Field styleInput="outline" name="password" type="password" label="Password" placeholder="Password" />
+            <Field
+              variant="outline"
+              name="name"
+              type="text"
+              label="Name"
+              placeholder="Your name"
+            />
+            <Field
+              variant="outline"
+              name="email"
+              type="email"
+              label="Email"
+              placeholder="Your email address"
+            />
+            <Field
+              variant="outline"
+              name="password"
+              type="password"
+              label="Password"
+              placeholder="Password"
+            />
 
-            <StyleButton type="submit" className="button" buttonStyle="solid" buttonSize="lg">
+            <Button type="submit" className="button" variant="solid" size="lg">
               Sign Up
-            </StyleButton>
+            </Button>
 
-            <FlexBoxContainer className="checkbox">
-              <StyleLink href="" linkStyle="underline">
+            <Box className="checkbox">
+              <StyleLink href="" variant="underline">
                 I have read and accept the terms
               </StyleLink>
 
-              <Field styleInput="outline" name="acceptTerms" type="checkbox" label="" />
-            </FlexBoxContainer>
+              <Field
+                variant="outline"
+                name="acceptTerms"
+                type="checkbox"
+                label=""
+              />
+            </Box>
           </Form>
 
-          <FlexBoxContainer className="signUpOrsignIn">
-            <StyleText tag="p" color="dark" fontSize="xs">
+          <Box className="signUpOrsignIn">
+            <StyleTypography tag="p" color="dark" size="xs">
               Don&apos;t have an account?
-              
-              <StyleLink href="/signin" linkStyle="underline" target="_self">
+              <StyleLink href="/signin" variant="underline" target="_self">
                 Sign In Now
               </StyleLink>
-            </StyleText>
-          </FlexBoxContainer>
+            </StyleTypography>
+          </Box>
         </StyleForm>
       )}
     </Formik>
-  )
+  );
 }

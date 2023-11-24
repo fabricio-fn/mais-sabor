@@ -1,28 +1,32 @@
-import { StyleOurMenu } from "./StyleOurMenu";
-import { FlexBoxContainer } from "../FlexBoxContainer/FlexBoxContainer";
-import { StyleText } from "../Text/StyleText";
-import { StyleCardsMenu } from "./CardsMenu/StyleCardsMenu";
-import ListMenuItem from "./ListMenuItem/ListMenuItem";
+import { StyleOurMenu } from './StyleOurMenu';
+import { Box, StyleTypography } from '@/components';
+import { StyleCardsMenu } from './CardsMenu/StyleCardsMenu';
+import ListMenuItem from './ListMenuItem/ListMenuItem';
 
-export default function OurMenu() {
+export function OurMenu() {
   return (
     <StyleOurMenu>
-      <FlexBoxContainer className="content">
-        <FlexBoxContainer className="title">
-          <StyleText tag="h3" fontSize="xs" color="black">Our Menu</StyleText>
-          <StyleText tag="h2" fontSize="md" color="dark">Our Popular Dishes</StyleText>
-        </FlexBoxContainer>
+      <Box className="content">
+        <Box className="title">
+          <StyleTypography tag="h3" size="xs" color="black">
+            Our Menu
+          </StyleTypography>
+          <StyleTypography tag="h2" size="md" color="dark">
+            Our Popular Dishes
+          </StyleTypography>
+        </Box>
 
-        <FlexBoxContainer className="description">
-          <StyleText tag="p" fontSize="xs" color="gray">
-            Best cooks and best delivery guys all at your service. Hot tasty food will reach you in 60 minutes.
-          </StyleText>
-        </FlexBoxContainer>
-      </FlexBoxContainer>
+        <Box className="description">
+          <StyleTypography tag="p" size="xs" color="gray">
+            Best cooks and best delivery guys all at your service. Hot tasty
+            food will reach you in 60 minutes.
+          </StyleTypography>
+        </Box>
+      </Box>
 
       <StyleCardsMenu>
         <ListMenuItem />
       </StyleCardsMenu>
     </StyleOurMenu>
-  )
+  );
 }

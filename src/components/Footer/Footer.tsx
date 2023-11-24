@@ -1,25 +1,29 @@
-"use client"
+import FooterLinks from './FooterLinks/FooterLinks';
+import { StyleFooter } from './StyleFooter';
+import { Box, StyleLink, StyleTypography } from '@/components';
 
-import { FlexBoxContainer } from "../FlexBoxContainer/FlexBoxContainer";
-import { StyleLink } from "../Link/StyleLink";
-import { StyleText } from "../Text/StyleText";
-import FooterLinks from "./FooterLinks/FooterLinks";
-import { StyleFooter } from "./StyleFooter";
-
-export default function Footer() {
+export function Footer() {
   return (
     <>
       <FooterLinks />
-      
-      <StyleFooter>
-        <StyleText tag="p" fontSize="xxs" color="light">Copyright © 2023 - All Right Reserved</StyleText>
 
-        <FlexBoxContainer>
-          <StyleLink href="/" linkStyle="light">Terms</StyleLink>
-          <StyleLink href="/" linkStyle="light">Privacy</StyleLink>
-          <StyleLink href="/" linkStyle="light">Security</StyleLink>
-        </FlexBoxContainer>
+      <StyleFooter>
+        <StyleTypography tag="p" size="xxs" color="light">
+          Copyright © 2023 - All Right Reserved
+        </StyleTypography>
+
+        <Box>
+          <StyleLink href="/" variant="light">
+            Terms
+          </StyleLink>
+          <StyleLink href="/" variant="light">
+            Privacy
+          </StyleLink>
+          <StyleLink href="/" variant="light">
+            Security
+          </StyleLink>
+        </Box>
       </StyleFooter>
     </>
-  )
+  );
 }

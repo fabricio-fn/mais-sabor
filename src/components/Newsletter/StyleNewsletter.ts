@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyleNewsletter = styled.section`
   background: ${({ theme }) => theme.colors.additional_4};
@@ -16,7 +16,7 @@ export const StyleNewsletter = styled.section`
   @media (max-width: 1039px) {
     justify-content: center !important;
   }
-  
+
   .content {
     align-items: start !important;
     flex-direction: column;
@@ -27,4 +27,4 @@ export const StyleNewsletter = styled.section`
       width: 100%;
     }
   }
-`
+`;

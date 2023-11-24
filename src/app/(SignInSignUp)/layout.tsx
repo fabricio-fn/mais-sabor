@@ -1,14 +1,14 @@
-import { Inter } from 'next/font/google'
-import { GlobalsStyles } from '@/styles/GlobalsStyles'
-import StyledComponentsRegistry from '@/lib/registry'
-import HeaderSignInSignUp from '@/components/HeaderSignInSignUp/HeaderSignInSignUp'
+import { Inter } from 'next/font/google';
+import { GlobalsStyles } from '@/styles/GlobalsStyles';
+import StyledComponentsRegistry from '@/lib/registry';
+import { HeaderSignInSignUp } from '@/components';
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="pt-BR">
@@ -17,10 +17,10 @@ export default function RootLayout({
           <HeaderSignInSignUp />
 
           {children}
-          
+
           <GlobalsStyles />
         </StyledComponentsRegistry>
       </body>
     </html>
-  )
+  );
 }

@@ -1,9 +1,7 @@
-"use client"
+'use client';
 
-import FormSignIn from "./FormSignIn/FormSignIn";
+import FormSignIn from './FormSignIn/FormSignIn';
 
 export default function SignIn() {
-  return (
-    <FormSignIn />
-  )
+  return <FormSignIn />;
 }

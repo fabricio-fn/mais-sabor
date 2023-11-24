@@ -1,11 +1,11 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyleHome = styled.section`
   justify-content: space-between !important;
   flex-wrap: wrap-reverse;
   min-height: 130vh;
   gap: 2rem;
-  
+
   .content {
     flex-direction: column;
     gap: 2rem;
@@ -29,13 +29,14 @@ export const StyleHome = styled.section`
   }
 
   @media (max-width: 420px) {
-    .img, .img img {
+    .img,
+    .img img {
       border-radius: 2rem;
       height: auto;
-    } 
+    }
   }
 
   @media (max-width: 1227px) {
     justify-content: center !important;
   }
-`
+`;

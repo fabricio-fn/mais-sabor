@@ -12,6 +12,5 @@ export const schemaSignIn = Yup.object().shape({
       'Use a strong password'
     ),
 
-  rememberMe: Yup.boolean()
-    .optional()
-})
+  rememberMe: Yup.boolean().optional(),
+});

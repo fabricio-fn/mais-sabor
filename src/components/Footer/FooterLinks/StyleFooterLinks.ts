@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyleFooterLinks = styled.section`
   justify-content: space-between !important;
@@ -9,7 +9,9 @@ export const StyleFooterLinks = styled.section`
   padding: 4rem 10%;
   gap: 4rem;
 
-  @media (max-width: 768px) { padding: 4rem 5%; }
+  @media (max-width: 768px) {
+    padding: 4rem 5%;
+  }
 
   .logo {
     gap: 2rem;
@@ -22,22 +24,26 @@ export const StyleFooterLinks = styled.section`
     .linksSocials {
       flex-direction: row;
 
-      @media(max-width: 327px) {
+      @media (max-width: 327px) {
         width: 100%;
         flex-direction: column;
 
-        a { width: 100%; }
+        a {
+          width: 100%;
+        }
       }
     }
   }
 
-  .otherLinks { 
+  .otherLinks {
     justify-content: space-between !important;
     flex-wrap: wrap;
     gap: 4rem;
     flex-direction: row;
 
-    .logo { width: auto; }
+    .logo {
+      width: auto;
+    }
   }
 
   div {
@@ -45,4 +51,4 @@ export const StyleFooterLinks = styled.section`
     flex-direction: column;
     gap: 2rem;
   }
-`
+`;

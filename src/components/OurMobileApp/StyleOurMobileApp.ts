@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyleOurMobileApp = styled.section`
   justify-content: space-between !important;
@@ -13,7 +13,7 @@ export const StyleOurMobileApp = styled.section`
   .img {
     width: 300px;
   }
-  
+
   .content {
     width: 430px;
     gap: 2em;
@@ -22,17 +22,22 @@ export const StyleOurMobileApp = styled.section`
       flex-direction: row;
       gap: 1rem;
     }
-    
+
     @media (max-width: 469px) {
       width: 100%;
 
-      .buttons, .buttons > button { width: 100%;}
-      
-      .buttons {flex-direction: column;}
+      .buttons,
+      .buttons > button {
+        width: 100%;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
     }
   }
 
   @media (max-width: 952px) {
-    justify-content: center !important;   
+    justify-content: center !important;
   }
-`
+`;

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyleListBlogItem = styled.li`
   width: 380px;
@@ -9,7 +9,7 @@ export const StyleListBlogItem = styled.li`
   }
 
   .cardsPosts {
-    transition: .4s;
+    transition: 0.4s;
     cursor: pointer;
     border: 1px solid ${({ theme }) => theme.colors.additional_7};
 
@@ -26,7 +26,7 @@ export const StyleListBlogItem = styled.li`
 
       h2 {
         font-size: 25px;
-        transition: .4s;
+        transition: 0.4s;
       }
 
       a {
@@ -40,8 +40,12 @@ export const StyleListBlogItem = styled.li`
       border: 1px solid ${({ theme }) => theme.colors.secondary};
       box-shadow: 0px 7px 29px 0px ${({ theme }) => theme.colors.additional_7};
 
-      & a { color: ${({ theme }) => theme.colors.primary}; }
-      & h2 { color: ${({ theme }) => theme.colors.primary}; }
+      & a {
+        color: ${({ theme }) => theme.colors.primary};
+      }
+      & h2 {
+        color: ${({ theme }) => theme.colors.primary};
+      }
     }
   }
-`
+`;

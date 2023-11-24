@@ -1,8 +1,7 @@
 import * as Yup from 'yup';
 
 export const schemaSignUp = Yup.object().shape({
-  name: Yup.string()
-    .required('Required field'),
+  name: Yup.string().required('Required field'),
 
   email: Yup.string()
     .email('Please enter a valid email address')
@@ -15,6 +14,5 @@ export const schemaSignUp = Yup.object().shape({
       'Use a strong password'
     ),
 
-  acceptTerms: Yup.bool()
-    .oneOf([true], 'You need to accept the terms'),
-})
+  acceptTerms: Yup.bool().oneOf([true], 'You need to accept the terms'),
+});

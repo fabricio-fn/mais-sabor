@@ -1,10 +1,10 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyleOurBlog = styled.section`
   flex-direction: column;
   text-align: center;
   gap: 4rem;
-  
+
   div {
     flex-direction: column;
   }
@@ -25,4 +25,4 @@ export const StyleOurBlog = styled.section`
     text-align: start !important;
     gap: 1rem;
   }
-`
+`;

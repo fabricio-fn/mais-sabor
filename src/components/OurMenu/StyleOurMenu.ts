@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyleOurMenu = styled.section`
   gap: 4rem;
@@ -15,15 +15,15 @@ export const StyleOurMenu = styled.section`
     }
 
     .description {
-      text-align: center;    
+      text-align: center;
 
       p {
-        width: 420px; 
+        width: 420px;
 
-        @media(max-width: 420px) {
+        @media (max-width: 420px) {
           width: 100%;
         }
       }
     }
   }
-`
+`;

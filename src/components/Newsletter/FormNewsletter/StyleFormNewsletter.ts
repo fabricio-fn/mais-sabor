@@ -1,5 +1,5 @@
 import { Form } from 'formik';
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const StyleFormNewsletter = styled(Form)`
   display: flex;
@@ -7,4 +7,4 @@ export const StyleFormNewsletter = styled(Form)`
   gap: 1rem;
   width: 400px;
   height: auto;
-`
+`;

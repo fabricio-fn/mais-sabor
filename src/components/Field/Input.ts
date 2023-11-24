@@ -1,28 +1,28 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from 'styled-components';
 
 interface iInput {
-  styleInput: string;
+  variant: string;
 }
 
 export const Input = styled.input<iInput>`
   background: transparent;
   border: none;
   font-size: 18px;
-  padding: 1rem .5rem;
+  padding: 1rem 0.5rem;
   display: flex;
   outline: none;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 
-  ${({ styleInput, theme }) => {
-    switch (styleInput) {
+  ${({ variant, theme }) => {
+    switch (variant) {
       case 'normal':
         return css`
           color: ${theme.colors.secondary};
-        `
+        `;
       case 'outline':
         return css`
           border: 1px solid ${theme.colors.primary};
-        `
+        `;
     }
-	}}
-`
+  }}
+`;

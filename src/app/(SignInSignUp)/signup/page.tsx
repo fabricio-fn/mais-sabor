@@ -1,9 +1,7 @@
-"use client"
+'use client';
 
-import FormSignUp from "./FormSignUp/FormSignUp"
+import FormSignUp from './FormSignUp/FormSignUp';
 
 export default function SignUp() {
-  return (
-    <FormSignUp />
-  )
+  return <FormSignUp />;
 }

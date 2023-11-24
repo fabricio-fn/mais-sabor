@@ -1,6 +1,6 @@
-"use client"
+'use client';
 
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalsStyles = createGlobalStyle`
 	* {
@@ -36,4 +36,4 @@ export const GlobalsStyles = createGlobalStyle`
 		max-width: 1920px;
 		width: 100%;
 	}
-`
+`;

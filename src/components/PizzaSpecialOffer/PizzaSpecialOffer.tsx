@@ -1,47 +1,65 @@
-import { FlexBoxContainer } from "../FlexBoxContainer/FlexBoxContainer";
-import { MdOutlineArrowForwardIos, MdStar } from "react-icons/md"
-import { StyleText } from "../Text/StyleText";
-import { StyleButton } from "../Button/StyleButton";
-import { StylePizzaSpecialOffer } from "./StylePizzaSpecialOffer";
-import { StyleBadge } from "../Badge/Badge";
-import Image from "next/image";
+import { StyleTypography, Box, Button, Badge } from '@/components';
+import { MdOutlineArrowForwardIos, MdStar } from '@/icons';
+import { StylePizzaSpecialOffer } from './StylePizzaSpecialOffer';
+import Image from 'next/image';
 
-export default function PizzaSpecialOffer() {
+export function PizzaSpecialOffer() {
   return (
     <StylePizzaSpecialOffer className="pizzaSpecialOffer">
-      <FlexBoxContainer className="img">
-        <Image src="/img/imgPizza.png" alt="Pizza Image" width={450} height={500} layout="responsive" />
+      <Box className="img">
+        <Image
+          src="/img/imgPizza.png"
+          alt="Pizza Image"
+          width={450}
+          height={500}
+          layout="responsive"
+        />
 
-        <FlexBoxContainer className="cardAssessment">
-          <Image src="/img/avatar-01.jpg" alt="" width={60} height={60} layout="responsive" />
+        <Box className="cardAssessment">
+          <Image
+            src="/img/avatar-01.jpg"
+            alt=""
+            width={60}
+            height={60}
+            layout="responsive"
+          />
 
-          <FlexBoxContainer className="assessment">
-            <StyleText tag="h3" fontSize="xs" color="dark">Sarah Taylor</StyleText>
-            <StyleText tag="p" fontSize="xxs" color="gray">Healthy and delicious pizza</StyleText>
+          <Box className="assessment">
+            <StyleTypography tag="h3" size="xs" color="dark">
+              Sarah Taylor
+            </StyleTypography>
+            <StyleTypography tag="p" size="xxs" color="gray">
+              Healthy and delicious pizza
+            </StyleTypography>
 
-            <FlexBoxContainer className="starIcon">
+            <Box className="starIcon">
               <MdStar fill="#FDC55E" size="15" />
               <MdStar fill="#FDC55E" size="15" />
               <MdStar fill="#FDC55E" size="15" />
               <MdStar fill="#FDC55E" size="15" />
               <MdStar fill="#FDC55E" size="15" />
-            </FlexBoxContainer>
-          </FlexBoxContainer>
-        </FlexBoxContainer>
-      </FlexBoxContainer>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
 
-      <FlexBoxContainer className="content">
-        <FlexBoxContainer className="title">
-          <StyleBadge badgeStyle="yellow">-50%</StyleBadge>
-          <StyleText tag="h2" fontSize="md" color="dark">Pizza Special Offer</StyleText>
-        </FlexBoxContainer>
+      <Box className="content">
+        <Box className="title">
+          <Badge variant="yellow">-50%</Badge>
+          <StyleTypography tag="h2" size="md" color="dark">
+            Pizza Special Offer
+          </StyleTypography>
+        </Box>
 
-        <StyleText tag="p" fontSize="xs" color="gray">Best cooks and best delivery guys all at your service. Hot tasty food will reach you in 60 minutes.</StyleText>
-        <StyleButton buttonStyle="solid" buttonSize="lg">
+        <StyleTypography tag="p" size="xs" color="gray">
+          Best cooks and best delivery guys all at your service. Hot tasty food
+          will reach you in 60 minutes.
+        </StyleTypography>
+        <Button variant="solid" size="lg">
           See All Menu
           <MdOutlineArrowForwardIos />
-        </StyleButton>
-      </FlexBoxContainer>
+        </Button>
+      </Box>
     </StylePizzaSpecialOffer>
-  )
+  );
 }

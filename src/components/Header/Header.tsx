@@ -1,57 +1,76 @@
-"use client"
+'use client';
 
-import { StyleHeader } from "./StyleHeader";
-import { StyleBadge } from "../Badge/Badge";
-import { StyleNav } from "./Nav/StyleNav";
-import { StyleLink } from "../Link/StyleLink";
-import { StyleButton } from "../Button/StyleButton";
-import { MdMenu, MdClose } from "react-icons/md"
-import useHeader from "./Hook/useHeader"
-import { FlexBoxContainer } from "../FlexBoxContainer/FlexBoxContainer";
-import { StyleText } from "../Text/StyleText";
-import { StyleButtonLink } from "../ButtonLink/StyleButtonLink";
-import { useState } from "react";
-import Image from "next/image";
+import { Navbar } from './Nav/Navbar';
+import { MdMenu, MdClose } from '@/icons';
+import useHeader from './Hook/useHeader';
+import { useState } from 'react';
+import Image from 'next/image';
+import { StyleHeader } from './StyleHeader';
+import {
+  Badge,
+  Box,
+  Button,
+  ButtonLink,
+  StyleLink,
+  StyleTypography,
+} from '@/components';
 
-export default function Header() {
-  const { showMenu, toggleMenu } = useHeader()
-  const [isConnected, setIsConnected] = useState(true)
+export function Header() {
+  const { showMenu, toggleMenu } = useHeader();
+  const [isConnected, setIsConnected] = useState(true);
 
   return (
     <StyleHeader>
-      <StyleText tag="h2" fontSize="sm" color="dark">
-        <StyleBadge badgeStyle="transparent">+</StyleBadge>Flavor
-      </StyleText>
+      <StyleTypography tag="h2" size="sm" color="dark">
+        <Badge variant="transparent">+</Badge>Flavor
+      </StyleTypography>
 
-      <StyleNav className={showMenu ? "active" : ""}>
-        <StyleLink linkStyle="normal" href="#home">Home</StyleLink>
-        <StyleLink linkStyle="normal" href="">Review</StyleLink>
-        <StyleLink linkStyle="normal" href="">About Us</StyleLink>
-        <StyleLink linkStyle="normal" href="">Contact Us</StyleLink>
-      </StyleNav>
+      <Navbar className={showMenu ? 'active' : ''}>
+        <StyleLink variant="normal" href="#home">
+          Home
+        </StyleLink>
+        <StyleLink variant="normal" href="">
+          Review
+        </StyleLink>
+        <StyleLink variant="normal" href="">
+          About Us
+        </StyleLink>
+        <StyleLink variant="normal" href="">
+          Contact Us
+        </StyleLink>
+      </Navbar>
 
-      <StyleButton buttonStyle="solid" buttonSize="sm" className="btnMenu"
-        onClick={toggleMenu}>
-        {showMenu ? (<MdClose />) : <MdMenu />}
-      </StyleButton>
+      <Button
+        variant="solid"
+        size="sm"
+        className="btnMenu"
+        onClick={toggleMenu}
+      >
+        {showMenu ? <MdClose /> : <MdMenu />}
+      </Button>
 
-      {isConnected ?
-        <FlexBoxContainer className="buttons">
-          <StyleButtonLink buttonLinkSize="lg" buttonLinkStyle="outline" href="/signin" target="_self">
+      {isConnected ? (
+        <Box className="buttons">
+          <ButtonLink size="lg" variant="outline" href="/signin" target="_self">
             Sign In
-          </StyleButtonLink>
+          </ButtonLink>
 
-          <StyleButtonLink buttonLinkSize="lg" buttonLinkStyle="solid" href="/signup" target="_self">
+          <ButtonLink size="lg" variant="solid" href="/signup" target="_self">
             Sign Up
-          </StyleButtonLink>
-        </FlexBoxContainer>
-        :
-        <FlexBoxContainer className="profilePicture">
-          <StyleLink linkStyle="standard" href="">
-            <Image src="/img/avatar-02.jpg" alt="Profile picture" width={60} height={60} />
+          </ButtonLink>
+        </Box>
+      ) : (
+        <Box className="profilePicture">
+          <StyleLink variant="standard" href="">
+            <Image
+              src="/img/avatar-02.jpg"
+              alt="Profile picture"
+              width={60}
+              height={60}
+            />
           </StyleLink>
-        </FlexBoxContainer>
-      }
+        </Box>
+      )}
     </StyleHeader>
-  )
+  );
 }

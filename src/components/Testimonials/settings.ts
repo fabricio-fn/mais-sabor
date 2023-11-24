@@ -1,5 +1,5 @@
 interface iSettings {
-	infinite: boolean;
+  infinite: boolean;
   speed: number;
   slidesToShow: number;
   slidesToScroll: number;
@@ -10,12 +10,12 @@ interface iSettings {
 }
 
 export const settings: iSettings = {
-	infinite: true,
-	speed: 500,
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	autoplay: true,
-	autoplaySpeed: 3000,
-	centerMode: true,
-	centerPadding: "0%",
-}
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  centerMode: true,
+  centerPadding: '0%',
+};

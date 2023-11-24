@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyleCardsMenu = styled.ul`
   display: flex;
@@ -6,4 +6,4 @@ export const StyleCardsMenu = styled.ul`
   flex-wrap: wrap;
   gap: 1rem;
   list-style: none;
-`
+`;

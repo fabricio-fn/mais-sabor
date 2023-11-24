@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyleHeader = styled.header`
   justify-content: space-between !important;
@@ -24,29 +24,31 @@ export const StyleHeader = styled.header`
       border: 2px solid ${({ theme }) => theme.colors.primary};
 
       &:hover {
-        opacity: .5;
+        opacity: 0.5;
       }
     }
   }
 
-  @media(max-width: 768px) { 
+  @media (max-width: 768px) {
     justify-content: start;
     background-color: ${({ theme }) => theme.colors.secondary};
-    
+
     .btnMenu {
       display: block;
     }
   }
 
-  @media(max-width: 968px) {
-    h2 { display: none; }
+  @media (max-width: 968px) {
+    h2 {
+      display: none;
+    }
 
     .buttons > a {
-      padding: .5rem !important;
+      padding: 0.5rem !important;
     }
   }
 
   .active {
     left: 5%;
   }
-`
+`;

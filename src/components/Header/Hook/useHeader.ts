@@ -1,42 +1,42 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from 'react';
 
 interface iHeader {
-	showMenu: boolean
-	toggleMenu: () => void
+  showMenu: boolean;
+  toggleMenu: () => void;
 }
 
 export default function useHeader(): iHeader {
-	const [showMenu, setShowMenu] = useState(true)
+  const [showMenu, setShowMenu] = useState(true);
 
-	const toggleMenu = () => {
-		setShowMenu(!showMenu)
-		console.log("clicou")
-	}
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+    console.log('clicou');
+  };
 
-	useEffect(() => {
-		const handleResize = () => {
-			setShowMenu(window.innerWidth > 768)
-		}
+  useEffect(() => {
+    const handleResize = () => {
+      setShowMenu(window.innerWidth > 768);
+    };
 
-		const handleScroll = () => {
-			if (window.innerWidth <= 768) {
-				setShowMenu(false)
-			}
-		}
+    const handleScroll = () => {
+      if (window.innerWidth <= 768) {
+        setShowMenu(false);
+      }
+    };
 
-		window.addEventListener("resize", handleResize)
-		window.addEventListener("scroll", handleScroll)
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('scroll', handleScroll);
 
-		handleResize()
+    handleResize();
 
-		return () => {
-			window.removeEventListener("resize", handleResize)
-			window.removeEventListener("scroll", handleScroll)
-		}
-	}, [])
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
-	return {
-		showMenu,
-		toggleMenu,
-	}
+  return {
+    showMenu,
+    toggleMenu,
+  };
 }

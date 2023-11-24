@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StylePizzaSpecialOffer = styled.section`
   background: ${({ theme }) => theme.colors.additional_4};
@@ -12,7 +12,6 @@ export const StylePizzaSpecialOffer = styled.section`
     height: 450px;
     position: relative;
     justify-content: end !important;
- 
 
     .cardAssessment {
       background: ${({ theme }) => theme.colors.secondary};
@@ -20,9 +19,9 @@ export const StylePizzaSpecialOffer = styled.section`
       height: 90px;
       position: absolute;
       gap: 2rem;
-      padding: .5rem;
+      padding: 0.5rem;
       border-radius: 1rem;
-      
+
       img {
         width: 60px !important;
         height: 60px !important;
@@ -32,11 +31,11 @@ export const StylePizzaSpecialOffer = styled.section`
       .assessment {
         align-items: start !important;
         flex-direction: column;
-        gap: .5rem;
+        gap: 0.5rem;
 
         .starIcon {
-          gap: .2rem;
-          color: ${({ theme }) => theme.colors.yellow};          
+          gap: 0.2rem;
+          color: ${({ theme }) => theme.colors.yellow};
         }
       }
     }
@@ -48,9 +47,9 @@ export const StylePizzaSpecialOffer = styled.section`
     gap: 2rem;
 
     .title {
-       align-items: start !important;
-       flex-direction: column;
-       gap: .5rem;
+      align-items: start !important;
+      flex-direction: column;
+      gap: 0.5rem;
     }
 
     p {
@@ -59,10 +58,13 @@ export const StylePizzaSpecialOffer = styled.section`
   }
 
   @media (max-width: 420px) {
-    .content > p, .img > .cardAssessment { width: 100%; }
+    .content > p,
+    .img > .cardAssessment {
+      width: 100%;
+    }
   }
 
   @media (max-width: 1295px) {
     justify-content: center !important;
   }
-`
+`;

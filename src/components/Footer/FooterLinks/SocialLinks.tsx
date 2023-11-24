@@ -1,22 +1,20 @@
-import { FlexBoxContainer } from "@/components/FlexBoxContainer/FlexBoxContainer";
-import { StyleButtonLink } from "@/components/ButtonLink/StyleButtonLink";
-import { BiLogoFacebook, BiLogoLinkedin } from "react-icons/bi";
-import { RiTwitterXLine } from "react-icons/ri";
+import { Box, ButtonLink } from '@/components';
+import { BiLogoFacebook, RiTwitterXLine, BiLogoLinkedin } from '@/icons';
 
 export default function SocialLinks() {
   return (
-    <FlexBoxContainer className="linksSocials">
-      <StyleButtonLink href="/" buttonLinkStyle="solidLight" buttonLinkSize="sm" title="Facebook">
+    <Box className="linksSocials">
+      <ButtonLink href="/" variant="solidLight" size="sm" title="Facebook">
         <BiLogoFacebook />
-      </StyleButtonLink>
+      </ButtonLink>
 
-      <StyleButtonLink href="/" buttonLinkStyle="solidLight" buttonLinkSize="sm" title="Twitter/X">
+      <ButtonLink href="/" variant="solidLight" size="sm" title="Twitter/X">
         <RiTwitterXLine />
-      </StyleButtonLink>
-      
-      <StyleButtonLink href="/" buttonLinkStyle="solidLight" buttonLinkSize="sm" title="Linkedin">
+      </ButtonLink>
+
+      <ButtonLink href="/" variant="solidLight" size="sm" title="Linkedin">
         <BiLogoLinkedin />
-      </StyleButtonLink>
-    </FlexBoxContainer>
-  )
+      </ButtonLink>
+    </Box>
+  );
 }

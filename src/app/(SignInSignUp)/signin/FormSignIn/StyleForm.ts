@@ -1,10 +1,12 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const StyleForm = styled.section`
   gap: 4rem;
   flex-direction: column;
 
-  @media (max-width: 768px) { width: 100%; }
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 
   form {
     display: flex;
@@ -13,13 +15,15 @@ export const StyleForm = styled.section`
     width: 400px;
     height: auto;
 
-    @media (max-width: 768px) { width: 100%; }
+    @media (max-width: 768px) {
+      width: 100%;
+    }
 
     .checkbox {
       justify-content: start;
       flex-wrap: wrap;
-      gap: .5rem;
-      
+      gap: 0.5rem;
+
       label {
         flex-direction: row;
         accent-color: ${({ theme }) => theme.colors.primary};
@@ -33,4 +37,4 @@ export const StyleForm = styled.section`
     justify-content: space-between !important;
     gap: 1rem;
   }
-`
+`;
